@@ -27,12 +27,24 @@
     <ClCompile Include="..\..\Dragonfly\include\Manager.cpp">
       <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\Clock.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Dragonfly\include\Manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Dragonfly\include\LogManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\Clock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\GameManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

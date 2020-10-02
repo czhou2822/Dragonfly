@@ -151,11 +151,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Dragonfly\include\Clock.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\LogManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Manager.cpp" />
     <ClCompile Include="..\game.cpp" />
+    <ClCompile Include="GameManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Dragonfly\include\Clock.h" />
+    <ClInclude Include="..\..\Dragonfly\include\GameManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\LogManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\Manager.h" />
   </ItemGroup>
