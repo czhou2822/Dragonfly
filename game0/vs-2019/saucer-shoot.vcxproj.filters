@@ -30,19 +30,31 @@
     <ClCompile Include="..\..\Dragonfly\include\Clock.cpp">
       <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
-    <ClCompile Include="GameManager.cpp">
+    <ClCompile Include="..\..\Dragonfly\include\ObjectListIterator.cpp">
       <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
-    <ClCompile Include="Vector.cpp">
+    <ClCompile Include="..\..\Dragonfly\include\Vector.cpp">
       <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
-    <ClCompile Include="Object.cpp">
+    <ClCompile Include="..\..\Dragonfly\include\GameManager.cpp">
       <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
-    <ClCompile Include="ObjectList.cpp">
+    <ClCompile Include="..\..\Dragonfly\include\Object.cpp">
       <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
-    <ClCompile Include="ObjectListIterator.cpp">
+    <ClCompile Include="..\..\Dragonfly\include\ObjectList.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\Event.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\EventStep.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\Sauser.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\WorldManager.cpp">
       <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
   </ItemGroup>
@@ -62,13 +74,25 @@
     <ClInclude Include="..\..\Dragonfly\include\Vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Object.h">
+    <ClInclude Include="..\..\Dragonfly\include\Event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectList.h">
+    <ClInclude Include="..\..\Dragonfly\include\Object.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectListIterator.h">
+    <ClInclude Include="..\..\Dragonfly\include\ObjectList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\ObjectListIterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\Sauser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\WorldManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\EventStep.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

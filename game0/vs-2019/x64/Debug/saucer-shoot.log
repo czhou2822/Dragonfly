@@ -1,4 +1,8 @@
-﻿  ObjectList.cpp
+﻿  GameManager.cpp
+  Object.cpp
+  ObjectList.cpp
   ObjectListIterator.cpp
+  Sauser.cpp
+  WorldManager.cpp
   Generating Code...
   saucer-shoot.vcxproj -> C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\game0\vs-2019\x64\Debug\saucer-shoot.exe

@@ -152,24 +152,32 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Dragonfly\include\Clock.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\Event.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\EventStep.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\GameManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\LogManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Manager.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\Object.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\ObjectList.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\ObjectListIterator.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\Sauser.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\Vector.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\WorldManager.cpp" />
     <ClCompile Include="..\game.cpp" />
-    <ClCompile Include="GameManager.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="ObjectList.cpp" />
-    <ClCompile Include="ObjectListIterator.cpp" />
-    <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Dragonfly\include\Clock.h" />
+    <ClInclude Include="..\..\Dragonfly\include\Event.h" />
+    <ClInclude Include="..\..\Dragonfly\include\EventStep.h" />
     <ClInclude Include="..\..\Dragonfly\include\GameManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\LogManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\Manager.h" />
+    <ClInclude Include="..\..\Dragonfly\include\Object.h" />
+    <ClInclude Include="..\..\Dragonfly\include\ObjectList.h" />
+    <ClInclude Include="..\..\Dragonfly\include\ObjectListIterator.h" />
+    <ClInclude Include="..\..\Dragonfly\include\Sauser.h" />
     <ClInclude Include="..\..\Dragonfly\include\Vector.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="ObjectList.h" />
-    <ClInclude Include="ObjectListIterator.h" />
+    <ClInclude Include="..\..\Dragonfly\include\WorldManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

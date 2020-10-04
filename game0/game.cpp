@@ -31,7 +31,6 @@
 #include "Clock.h"
 
 
-
 int main(int argc, char *argv[]) 
 {
 
@@ -49,6 +48,8 @@ int main(int argc, char *argv[])
 	GM.startUp();
 
 	LM.writeLog("Hello Dragonfly %i\n", 10);
+
+
 //	LM.setFlush(true);
 
 	Sleep(2000);
