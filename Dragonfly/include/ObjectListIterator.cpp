@@ -1,8 +1,8 @@
 #include "ObjectListIterator.h"
 
 df::ObjectListIterator::ObjectListIterator(const ObjectList* p_l)
+	:m_p_list(p_l)
 {
-	m_p_list = p_l;
 	first();
 }
 

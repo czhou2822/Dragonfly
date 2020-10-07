@@ -1,5 +1,6 @@
 #include "Manager.h"
-
+#include "EventStep.h"
+#include "WorldManager.h"
 
 
 df::Manager::Manager()
@@ -24,6 +25,23 @@ int df::Manager::startUp()
 void df::Manager::shutDown()
 {
 	m_is_started = false;
+}
+
+int df::Manager::onEvent(const Event* p_event) const
+{
+	int count = 0;
+	ObjectList allObjects = WM.getAllObjects();
+
+	ObjectListIterator li(&allObjects);
+
+	while (!li.isDone())
+	{
+		li.currentObject()->eventHandler(p_event);
+		li.next();
+		count++;
+	}
+
+	return count;
 }
 
 void df::Manager::setType(std::string type)

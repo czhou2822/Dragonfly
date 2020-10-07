@@ -41,13 +41,13 @@ int df::LogManager::writeLog(const char* fmt, ...) const
 	//sprintf -> print formatted string to buffer
 
 	fprintf(m_p_f, "Message: ");    //print whatever provided within quote to the console
-//	fprintf(stderr, "Message: ");    //print whatever provided within quote to the console
+	fprintf(stderr, "Message: ");    //print whatever provided within quote to the console
 
 
 	va_list args;
 	va_start(args, fmt);           //Initialize a variable argument list
 	vfprintf(m_p_f, fmt, args);   //Write formatted data from variable argument list to stream
-//	vfprintf(stderr, fmt, args);   //Write formatted data from variable argument list to stream
+	vfprintf(stderr, fmt, args);   //Write formatted data from variable argument list to stream
 	va_end(args);				   //End using variable argument list
 
 

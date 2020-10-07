@@ -28,7 +28,12 @@
 
 #include "GameManager.h"
 #include "LogManager.h"
+#include "DisplayManager.h"
+
 #include "Clock.h"
+#include "Vector.h"
+
+#include "Sauser.h"
 
 
 int main(int argc, char *argv[]) 
@@ -45,16 +50,23 @@ int main(int argc, char *argv[])
 	//	timeEndPeriod(1);
 	//}
 
-	GM.startUp();
+//	GM.startUp();
+//
+//	
+//	LM.writeLog("Hello Dragonfly %i\n", 10);
+//
+//
+////	LM.setFlush(true);
+//
+//
+//	GM.shutDown();
 
-	LM.writeLog("Hello Dragonfly %i\n", 10);
-
-
-//	LM.setFlush(true);
-
+	DM.startUp();
+	DM.drawCh(df::Vector(10, 5), '*', df::WHITE);
+	DM.swapBuffers();
 	Sleep(2000);
+	DM.shutDown();
 
-	GM.shutDown();
 	
 
 

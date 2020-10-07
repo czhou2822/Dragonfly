@@ -4,6 +4,8 @@
 
 namespace df
 {
+	const std::string STEP_EVENT = "df::step";
+
 	class EventStep : public df::Event
 	{
 	private:
@@ -13,7 +15,7 @@ namespace df
 
 
 	public:
-		EventStep() = default;
+		EventStep();
 
 		EventStep(int init_step_count);
 

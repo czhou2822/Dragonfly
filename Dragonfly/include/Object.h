@@ -11,8 +11,12 @@ namespace df
 	{
 	private:
 		int m_id;
+
 		std::string m_type;
+
 		Vector m_position;
+
+		int m_altitude;
 
 	public:
 		Object();
@@ -32,6 +36,12 @@ namespace df
 		void setPosition(Vector new_pos);
 
 		inline Vector getPosition() const { return m_position; }
+
+		inline void setAltitude(int new_altitude) { m_altitude = new_altitude; }
+
+		inline int getAltitude() const { return m_altitude; }
+
+		virtual int draw();
 
 	};
 

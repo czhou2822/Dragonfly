@@ -1,6 +1,7 @@
 #include "WorldManager.h"
 
 
+
 df::WorldManager::WorldManager()
 	:m_updates()
 	,m_deletions()
@@ -47,7 +48,7 @@ int df::WorldManager::removeObject(Object* p_o)
 
 df::ObjectList df::WorldManager::getAllObjects() const
 {
-	return ObjectList();
+	return m_updates;
 }
 
 df::ObjectList df::WorldManager::objectsOfType(std::string type) const
@@ -77,7 +78,7 @@ void df::WorldManager::update()
 		ObjectList ol = m_deletions;
 		ObjectListIterator li(&ol);
 
-		for (li.first(); !li.isDone(); li++)
+		for (li.first(); !li.isDone(); li.next())
 		{
 			delete li.currentObject();
 		}
@@ -97,9 +98,34 @@ int df::WorldManager::markForDelete(Object* p_o)
 		{
 			return 0;
 		}
-		li++;
+		li.next();
 	}
 
 	m_deletions.insert(p_o);
 	return 0;
+}
+
+void df::WorldManager::draw()
+{
+	ObjectListIterator li(&m_updates);
+
+	//alt loop
+
+	for (int alt = 0; alt <= MAX_ALTITUDE; alt++)
+	{
+		//ObjectIterator 
+		while (!li.isDone())
+		{
+			Object* p_temp_o = li.currentObject();
+			if (p_temp_o->getAltitude() == alt)    //check if this object is drawn for current alt
+			{
+				p_temp_o->draw();					//if so, draw
+			}
+			li.next();								//moving on
+		}
+
+		li.first();                                 //reset index for next alt loop
+	}
+
+
 }

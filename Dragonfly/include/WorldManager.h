@@ -10,6 +10,8 @@
 
 namespace df
 {
+	const int MAX_ALTITUDE = 4;
+
 	class WorldManager : public df::Manager
 	{
 	private:
@@ -49,6 +51,8 @@ namespace df
 
 		//indicate object is to be deleted at end of current game loop
 		int markForDelete(Object* p_o);
+
+		void draw();
 
 
 	};

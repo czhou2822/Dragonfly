@@ -30,3 +30,8 @@ void df::Object::setPosition(Vector new_pos)
 {
 	m_position = new_pos;
 }
+
+int df::Object::draw()
+{
+	return 0;
+}

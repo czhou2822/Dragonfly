@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string>
 
+#include "Event.h"
+
 namespace df
 {
 	class Manager 
@@ -25,6 +27,10 @@ namespace df
 		virtual int startUp();
 
 		virtual void shutDown();
+
+		// Send event to all Objects.
+		// Return count of number of events sent .
+		int onEvent(const Event* p_event) const;
 
 		bool isStarted() const;
 

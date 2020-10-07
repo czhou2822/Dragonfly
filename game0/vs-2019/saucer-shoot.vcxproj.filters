@@ -57,6 +57,9 @@
     <ClCompile Include="..\..\Dragonfly\include\WorldManager.cpp">
       <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\DisplayManager.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Dragonfly\include\Manager.h">
@@ -93,6 +96,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Dragonfly\include\EventStep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\Color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\DisplayManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

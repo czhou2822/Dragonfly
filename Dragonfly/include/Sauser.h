@@ -13,6 +13,10 @@ namespace df
 	public:
 		Sauser();
 
+		~Sauser();
+
+		int eventHandler(const Event* p_e);
+
 
 	};
 }

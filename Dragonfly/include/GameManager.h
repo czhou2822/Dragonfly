@@ -20,6 +20,7 @@ namespace df
 
 		bool game_over;
 		int frame_time;
+		int game_cycle;
 
 		Clock m_clock;
 
@@ -35,6 +36,8 @@ namespace df
 		void run();
 
 		void setGameOver(bool new_game_over = true);
+
+		void sendStepEvent();
 
 		inline bool getGameOver() const { return game_over; };
 
