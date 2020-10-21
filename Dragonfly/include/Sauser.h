@@ -17,6 +17,10 @@ namespace df
 
 		int eventHandler(const Event* p_e);
 
+		void MoveForward();
+
+		virtual int draw() override;
+
 
 	};
 }

@@ -1,4 +1,2 @@
-﻿  DisplayManager.cpp
-C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\DisplayManager.cpp(89,37): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\DisplayManager.cpp(93,38): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+﻿  Sauser.cpp
   saucer-shoot.vcxproj -> C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\game0\vs-2019\x64\Debug\saucer-shoot.exe

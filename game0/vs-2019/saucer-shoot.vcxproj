@@ -154,8 +154,11 @@
     <ClCompile Include="..\..\Dragonfly\include\Clock.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\DisplayManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Event.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\EventKeyboard.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\EventMouse.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\EventStep.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\GameManager.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\InputManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\LogManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Manager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Object.cpp" />
@@ -171,8 +174,11 @@
     <ClInclude Include="..\..\Dragonfly\include\Color.h" />
     <ClInclude Include="..\..\Dragonfly\include\DisplayManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\Event.h" />
+    <ClInclude Include="..\..\Dragonfly\include\EventKeyboard.h" />
+    <ClInclude Include="..\..\Dragonfly\include\EventMouse.h" />
     <ClInclude Include="..\..\Dragonfly\include\EventStep.h" />
     <ClInclude Include="..\..\Dragonfly\include\GameManager.h" />
+    <ClInclude Include="..\..\Dragonfly\include\InputManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\LogManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\Manager.h" />
     <ClInclude Include="..\..\Dragonfly\include\Object.h" />

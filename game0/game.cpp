@@ -29,7 +29,7 @@
 #include "GameManager.h"
 #include "LogManager.h"
 #include "DisplayManager.h"
-
+#include "InputManager.h"
 #include "Clock.h"
 #include "Vector.h"
 
@@ -50,22 +50,32 @@ int main(int argc, char *argv[])
 	//	timeEndPeriod(1);
 	//}
 
-//	GM.startUp();
-//
-//	
-//	LM.writeLog("Hello Dragonfly %i\n", 10);
-//
-//
-////	LM.setFlush(true);
-//
-//
-//	GM.shutDown();
+	GM.startUp();
 
-	DM.startUp();
-	DM.drawCh(df::Vector(10, 5), '*', df::WHITE);
-	DM.swapBuffers();
-	Sleep(2000);
-	DM.shutDown();
+	
+	LM.writeLog("Hello Dragonfly %i\n", 10);
+
+
+//	LM.setFlush(true);
+
+
+	GM.shutDown();
+
+	//DM.startUp();
+	//DM.drawCh(df::Vector(10, 5), '&', df::WHITE);
+	//DM.swapBuffers();
+
+
+	//while (1)
+	//{
+	//	IM.getInput();
+	//}
+
+
+
+
+	//Sleep(2000);
+	//DM.shutDown();
 
 	
 

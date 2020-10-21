@@ -51,14 +51,23 @@
     <ClCompile Include="..\..\Dragonfly\include\EventStep.cpp">
       <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Dragonfly\include\Sauser.cpp">
-      <Filter>Source Files\EngineRelated</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Dragonfly\include\WorldManager.cpp">
       <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Dragonfly\include\DisplayManager.cpp">
       <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\InputManager.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\EventKeyboard.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\EventMouse.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\Sauser.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +111,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Dragonfly\include\DisplayManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\InputManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\EventKeyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\EventMouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

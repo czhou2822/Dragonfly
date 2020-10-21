@@ -24,16 +24,22 @@ int df::DisplayManager::startUp()
 		return 0;
 	}
 
+	m_window_horizontal_pixels = 1024;		// Horizontal pixels in window.
+	m_window_vertical_pixels = 1024;		// Vertical pixels in window.
+	m_window_horizontal_chars = 64;		// Horizontal ASCII spaces in window.
+	m_window_vertical_chars = 64;		// Vertical ASCII spaces in window.
+
 	//else create
-	m_p_window = new sf::RenderWindow(sf::VideoMode(400, 300), "SFML-Hello world");
+	m_p_window = new sf::RenderWindow(sf::VideoMode(m_window_horizontal_pixels, m_window_vertical_pixels), "SFML-Hello world");
 	if (!m_p_window)
 	{
 		std::cout << "Error! Unable to allocate RenderWindow" << std::endl;
 		return -1;
 	}
 
-	m_p_window->setMouseCursorVisible(false);
 
+	m_p_window->setMouseCursorVisible(false);
+	
 	m_p_window->setVerticalSyncEnabled(true);
 
 

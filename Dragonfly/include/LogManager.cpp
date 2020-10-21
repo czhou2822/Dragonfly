@@ -2,6 +2,7 @@
 
 df::LogManager::LogManager()
 {
+	startUp();
 }
 
 df::LogManager::~LogManager()
