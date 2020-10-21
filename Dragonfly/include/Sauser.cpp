@@ -12,6 +12,8 @@ df::Sauser::Sauser()
 	setType("Sauser");
 	setAltitude(0);
 	setPosition(df::Vector(10, 5));
+
+	setSpeed(0.25);
 }
 
 df::Sauser::~Sauser()

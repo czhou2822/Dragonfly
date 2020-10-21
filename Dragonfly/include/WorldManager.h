@@ -52,7 +52,20 @@ namespace df
 		//indicate object is to be deleted at end of current game loop
 		int markForDelete(Object* p_o);
 
+		//go through all objects and draw them, calls every frame
 		void draw();
+
+		//return list of objects collided with at position 'where'
+		//collisions only with solid objects
+		//does not consider if p_o is solid or not
+		ObjectList getCollision(Object* p_o, Vector where) const;
+
+		//move object
+		//if collision with solid, send collision events
+		//if no collision with solid, move ok else dont move object
+		//if object is spectral, move ok
+		//return 0 if move ok, -1 if collision with solid
+		int moveObject(Object* p_o, Vector where);
 
 
 	};

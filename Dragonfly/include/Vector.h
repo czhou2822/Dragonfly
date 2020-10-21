@@ -9,13 +9,21 @@ namespace df
 		float m_y;
 
 	public:
-		Vector(float init_x, float init_y);
-
 		Vector();
 
-		void setX(float new_x);
-		inline float getX() const { return m_x; }
+		Vector(float init_x, float init_y);
 
+		Vector operator+(const Vector& other) const;
+
+		bool operator!=(const Vector& other) const;
+
+		bool operator==(const Vector& other) const;
+
+		Vector operator*(const float& other) const;
+
+		void setX(float new_x);
+
+		inline float getX() const { return m_x; }
 
 		void setY(float new_y);
 		inline float getY() const { return m_y; };
@@ -28,7 +36,7 @@ namespace df
 
 		void scale(float s);
 
-		Vector operator+(const Vector& other) const;
+
 
 
 	};

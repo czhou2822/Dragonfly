@@ -154,8 +154,10 @@
     <ClCompile Include="..\..\Dragonfly\include\Clock.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\DisplayManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Event.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\EventCollision.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\EventKeyboard.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\EventMouse.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\EventOut.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\EventStep.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\GameManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\InputManager.cpp" />
@@ -165,6 +167,7 @@
     <ClCompile Include="..\..\Dragonfly\include\ObjectList.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\ObjectListIterator.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Sauser.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\utility.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Vector.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\WorldManager.cpp" />
     <ClCompile Include="..\game.cpp" />
@@ -174,8 +177,10 @@
     <ClInclude Include="..\..\Dragonfly\include\Color.h" />
     <ClInclude Include="..\..\Dragonfly\include\DisplayManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\Event.h" />
+    <ClInclude Include="..\..\Dragonfly\include\EventCollision.h" />
     <ClInclude Include="..\..\Dragonfly\include\EventKeyboard.h" />
     <ClInclude Include="..\..\Dragonfly\include\EventMouse.h" />
+    <ClInclude Include="..\..\Dragonfly\include\EventOut.h" />
     <ClInclude Include="..\..\Dragonfly\include\EventStep.h" />
     <ClInclude Include="..\..\Dragonfly\include\GameManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\InputManager.h" />
@@ -185,6 +190,7 @@
     <ClInclude Include="..\..\Dragonfly\include\ObjectList.h" />
     <ClInclude Include="..\..\Dragonfly\include\ObjectListIterator.h" />
     <ClInclude Include="..\..\Dragonfly\include\Sauser.h" />
+    <ClInclude Include="..\..\Dragonfly\include\utility.h" />
     <ClInclude Include="..\..\Dragonfly\include\Vector.h" />
     <ClInclude Include="..\..\Dragonfly\include\WorldManager.h" />
   </ItemGroup>

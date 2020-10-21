@@ -1,5 +1,8 @@
 #include "WorldManager.h"
-
+#include "DisplayManager.h"
+#include "EventCollision.h"
+#include "EventOut.h"
+#include "utility.h"
 
 
 df::WorldManager::WorldManager()
@@ -70,8 +73,25 @@ df::ObjectList df::WorldManager::objectsOfType(std::string type) const
 void df::WorldManager::update()
 {
 	//move objects
+	{
+		ObjectList ol = m_updates;
+		ObjectListIterator li(&ol);
+		for (li.first(); !li.isDone(); li.next())
+		{
+			df::Object* p_o  = li.currentObject();
+			Vector new_pos = p_o->predictPosition();
+			if (new_pos != p_o->getPosition())
+			{
+				p_o->setPosition(new_pos);
+			}
+		}
+	}
+
+
 
 	//generate collision events
+
+
 
 	//remove objects that have been marked for deletion
 	{
@@ -123,9 +143,80 @@ void df::WorldManager::draw()
 			}
 			li.next();								//moving on
 		}
-
 		li.first();                                 //reset index for next alt loop
+	}
+}
+
+df::ObjectList df::WorldManager::getCollision(Object* p_o, Vector where) const
+{
+
+	ObjectListIterator li(&m_updates);
+
+	ObjectList collisionList;
+
+	for (li.first(); !li.isDone(); li.next())
+	{
+		auto p_temp_o = li.currentObject();
+
+		if (p_temp_o != p_o)
+		{
+			//if the distance of p_temp_o and where is less than 1, consider collide
+			if (df::positionsIntersect(p_temp_o->getPosition(), where) && p_temp_o->isSolid())
+			{
+				collisionList.insert(p_temp_o);
+			}
+		}
+	}
+
+	return collisionList;
+}
+
+//move object
+//if collision with solid, send collision events
+//if no collision with solid, move ok
+//if all collided objects soft, move ok
+//if object is spectral, move ok
+//if move ok, move
+//return 0 if moved, else -1 if collision with solid
+int df::WorldManager::moveObject(Object* p_o, Vector where)
+{
+	if (p_o->isSolid())
+	{
+		ObjectList List = getCollision(p_o, where);
+		if (!List.isEmpty())   //if list not empty, meaning collision/overlapp happened, need to check
+		{
+			bool do_move = true;
+			ObjectListIterator li(&List);
+			for (li.first(); !li.isDone(); li.next())
+			{
+				auto p_temp_o = li.currentObject();
+
+				EventCollision c(p_o, p_temp_o, where);    //send collision to both object
+
+				p_o->eventHandler(&c);
+				p_temp_o->eventHandler(&c);
+
+				if (p_o->getSolidness() == Solidness::HARD && p_temp_o->getSolidness() == Solidness::HARD)     //if both hard objects, cannot move
+				{
+					do_move = false;
+				}
+			}
+
+			if (!do_move)
+			{
+				return -1;
+			}
+		}
+	}
+
+	p_o->setPosition(where);
+
+	if (p_o->getPosition().getX() > DM.getHorizontal() || p_o->getPosition().getY() > DM.getVertical())
+	{
+		EventOut ov;
+		p_o->eventHandler(&ov);
 	}
 
 
+	return 0;
 }

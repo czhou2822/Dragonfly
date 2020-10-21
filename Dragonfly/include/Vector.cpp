@@ -64,3 +64,23 @@ df::Vector df::Vector::operator+(const Vector& other) const
 
     return v;
 }
+
+bool df::Vector::operator!=(const Vector& other) const
+{
+    if (this->m_x == other.m_x && this->m_y == other.m_y)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool df::Vector::operator==(const Vector& other) const
+{
+    return !df::Vector::operator!=(other);
+}
+
+df::Vector df::Vector::operator*(const float& other) const
+{
+    Vector product(m_x * other, m_y * other);
+    return product;
+}

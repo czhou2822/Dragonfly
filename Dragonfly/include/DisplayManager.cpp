@@ -6,6 +6,10 @@
 
 df::DisplayManager::DisplayManager()
 	:m_p_window(nullptr)
+	,m_window_horizontal_pixels(WINDOW_HORIZONTAL_PIXELS_DEFAULT) // Horizontal pixels in window.
+	,m_window_vertical_pixels(WINDOW_VERTICAL_PIXELS_DEFAULT)   // Vertical pixels in window.
+	,m_window_horizontal_chars(WINDOW_HORIZONTAL_CHARS_DEFAULT)  // Horizontal ASCII spaces in window.
+	,m_window_vertical_chars(WINDOW_VERTICAL_CHARS_DEFAULT)    // Vertical ASCII spaces in window.
 {
 	setType("DisplayManager");
 }
@@ -23,11 +27,6 @@ int df::DisplayManager::startUp()
 	{
 		return 0;
 	}
-
-	m_window_horizontal_pixels = 1024;		// Horizontal pixels in window.
-	m_window_vertical_pixels = 1024;		// Vertical pixels in window.
-	m_window_horizontal_chars = 64;		// Horizontal ASCII spaces in window.
-	m_window_vertical_chars = 64;		// Vertical ASCII spaces in window.
 
 	//else create
 	m_p_window = new sf::RenderWindow(sf::VideoMode(m_window_horizontal_pixels, m_window_vertical_pixels), "SFML-Hello world");
