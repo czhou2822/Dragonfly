@@ -12,7 +12,6 @@ df::WorldManager::WorldManager()
 	setType("WorldManager");
 }
 
-
 df::WorldManager& df::WorldManager::getInstance()
 {
 	static df::WorldManager worldManager;
@@ -82,7 +81,7 @@ void df::WorldManager::update()
 			Vector new_pos = p_o->predictPosition();
 			if (new_pos != p_o->getPosition())
 			{
-				p_o->setPosition(new_pos);
+				moveObject(p_o, new_pos);
 			}
 		}
 	}
@@ -90,7 +89,6 @@ void df::WorldManager::update()
 
 
 	//generate collision events
-
 
 
 	//remove objects that have been marked for deletion

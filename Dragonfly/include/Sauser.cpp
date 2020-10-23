@@ -3,6 +3,8 @@
 #include "EventKeyboard.h"
 #include "EventMouse.h"
 #include "DisplayManager.h"
+#include "EventOut.h"
+#include "EventCollision.h"
 
 #include "Sauser.h"
 
@@ -11,9 +13,11 @@ df::Sauser::Sauser()
 {
 	setType("Sauser");
 	setAltitude(0);
-	setPosition(df::Vector(10, 5));
+	setPosition(df::Vector(60, 5));
 
 	setSpeed(0.25);
+
+	setVelocity(df::Vector(0.25, 0));
 }
 
 df::Sauser::~Sauser()
@@ -50,6 +54,26 @@ int df::Sauser::eventHandler(const Event* p_e)
 			}
 		}
 	}
+
+	if (p_e->getType() == df::OUT_EVENT)
+	{
+		auto newStepEvent = dynamic_cast<const df::EventOut*>(p_e);
+		if (newStepEvent)
+		{
+			LM.writeLog("out!\n");
+		}
+	}
+
+	if (p_e->getType() == df::COLLISION_EVENT)
+	{
+		auto newStepEvent = dynamic_cast<const df::EventCollision*>(p_e);
+		if (newStepEvent)
+		{
+			LM.writeLog("collision!\n");
+		}
+	}
+
+
 	return 0;
 }
 

@@ -69,14 +69,14 @@
     <ClCompile Include="..\..\Dragonfly\include\Sauser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\EventOut.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Dragonfly\include\EventCollision.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Dragonfly\include\utility.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Dragonfly\include\EventOut.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

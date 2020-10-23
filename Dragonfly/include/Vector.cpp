@@ -69,9 +69,9 @@ bool df::Vector::operator!=(const Vector& other) const
 {
     if (this->m_x == other.m_x && this->m_y == other.m_y)
     {
-        return true;
+        return false;
     }
-    return false;
+    return true;
 }
 
 bool df::Vector::operator==(const Vector& other) const

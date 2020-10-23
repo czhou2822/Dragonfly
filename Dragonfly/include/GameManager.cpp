@@ -44,9 +44,13 @@ int df::GameManager::startUp()
 	Manager::startUp();
 
 
-	DM.drawCh(df::Vector(10, 5), '&', df::WHITE);
 	df::Sauser* newSauser = new df::Sauser();
 
+	newSauser->setPosition(df::Vector(50, 5));
+
+	df::Sauser* newSauser2 = new df::Sauser();
+
+	newSauser2->setVelocity(Vector(0, 0));
 
 
 	run();  //start main loop
@@ -93,7 +97,7 @@ void df::GameManager::run()
 
 			////core loop
 			//LM.writeLog("%i game running \n", game_cycle);
-			//game_over_counter++;
+			game_over_counter++;
 
 
 			//send step event
