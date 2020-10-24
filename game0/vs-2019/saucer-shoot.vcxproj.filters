@@ -78,6 +78,18 @@
     <ClCompile Include="..\..\Dragonfly\include\utility.cpp">
       <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\Frame.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\ResourceManager.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\Sprite.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\Color.cpp">
+      <Filter>Source Files\EngineRelated</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Dragonfly\include\Manager.h">
@@ -138,6 +150,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Dragonfly\include\EventOut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\ResourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\Sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\Frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
