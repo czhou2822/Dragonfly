@@ -152,7 +152,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Dragonfly\include\Clock.cpp" />
-    <ClCompile Include="..\..\Dragonfly\include\Color.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\DisplayManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Event.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\EventCollision.cpp" />
@@ -160,7 +159,6 @@
     <ClCompile Include="..\..\Dragonfly\include\EventMouse.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\EventOut.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\EventStep.cpp" />
-    <ClCompile Include="..\..\Dragonfly\include\Frame.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\GameManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\InputManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\LogManager.cpp" />
@@ -168,9 +166,7 @@
     <ClCompile Include="..\..\Dragonfly\include\Object.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\ObjectList.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\ObjectListIterator.cpp" />
-    <ClCompile Include="..\..\Dragonfly\include\ResourceManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Sauser.cpp" />
-    <ClCompile Include="..\..\Dragonfly\include\Sprite.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\utility.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Vector.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\WorldManager.cpp" />
@@ -186,7 +182,6 @@
     <ClInclude Include="..\..\Dragonfly\include\EventMouse.h" />
     <ClInclude Include="..\..\Dragonfly\include\EventOut.h" />
     <ClInclude Include="..\..\Dragonfly\include\EventStep.h" />
-    <ClInclude Include="..\..\Dragonfly\include\Frame.h" />
     <ClInclude Include="..\..\Dragonfly\include\GameManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\InputManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\LogManager.h" />
@@ -194,9 +189,7 @@
     <ClInclude Include="..\..\Dragonfly\include\Object.h" />
     <ClInclude Include="..\..\Dragonfly\include\ObjectList.h" />
     <ClInclude Include="..\..\Dragonfly\include\ObjectListIterator.h" />
-    <ClInclude Include="..\..\Dragonfly\include\ResourceManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\Sauser.h" />
-    <ClInclude Include="..\..\Dragonfly\include\Sprite.h" />
     <ClInclude Include="..\..\Dragonfly\include\utility.h" />
     <ClInclude Include="..\..\Dragonfly\include\Vector.h" />
     <ClInclude Include="..\..\Dragonfly\include\WorldManager.h" />

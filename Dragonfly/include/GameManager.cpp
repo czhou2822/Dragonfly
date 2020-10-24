@@ -7,9 +7,7 @@
 #include "WorldManager.h"
 #include "DisplayManager.h"
 #include "InputManager.h"
-#include "ResourceManager.h"
 #include "EventStep.h"
-
 #include "Sauser.h"
 
 df::GameManager::GameManager()
@@ -42,21 +40,18 @@ int df::GameManager::startUp()
 		WM.startUp();       //world manager
 		DM.startUp();
 		IM.startUp();
-		RM.startUp();
 	}
 	Manager::startUp();
 
 
 	df::Sauser* newSauser = new df::Sauser();
 
-	newSauser->setPosition(df::Vector(40, 5));
-	newSauser->setVelocity(Vector(0, 0));
+	newSauser->setPosition(df::Vector(50, 5));
 
 	df::Sauser* newSauser2 = new df::Sauser();
 
 	newSauser2->setVelocity(Vector(0, 0));
 
-	RM.loadSprite("sprites/saucer-spr.txt", "saucer");
 
 	run();  //start main loop
 
@@ -77,7 +72,6 @@ void df::GameManager::shutDown()
 		WM.shutDown();
 		DM.shutDown();
 		IM.shutDown();
-		RM.shutDown();
 	}
 	Manager::shutDown();
 }

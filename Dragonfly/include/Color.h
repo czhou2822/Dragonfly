@@ -1,12 +1,10 @@
 #ifndef __COLOR_H__
 #define __COLOR_H__
 
-namespace df 
-{
+namespace df {
 
 	// Colors Dragonfly recognizes.
-	enum Color 
-	{
+	enum Color {
 		UNDEFINED_COLOR = -1,
 		BLACK = 0,
 		RED,
@@ -23,5 +21,4 @@ namespace df
 	const Color COLOR_DEFAULT = WHITE;
 
 } // end of namespace df
-
 #endif //__COLOR_H__
