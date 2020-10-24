@@ -59,7 +59,7 @@ int df::ResourceManager::loadSprite(std::string filename, std::string label)
         }
         else if (i->find("color") != std::string::npos)
         {
-            i->erase(i->find("color"), 5);
+            i->erase(i->find("color"), 6);
             newColor = stringToColor(*i);
         }
         else if (i->find("slowdown") != std::string::npos)
@@ -164,7 +164,7 @@ df::Sprite* df::ResourceManager::getSprite(std::string label) const
 {
     for (int i = 0; i <= m_sprite_count - 1; i++)
     {
-        if (label.compare(m_p_sprite[i]->getLabel()))
+        if (label.compare(m_p_sprite[i]->getLabel())==0)
         {
             return m_p_sprite[i];
         }

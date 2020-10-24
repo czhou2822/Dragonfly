@@ -6,6 +6,7 @@
 #include "LogManager.h"
 #include "WorldManager.h"
 #include "DisplayManager.h"
+#include "ResourceManager.h"
 #include "InputManager.h"
 #include "EventStep.h"
 #include "Sauser.h"
@@ -40,20 +41,12 @@ int df::GameManager::startUp()
 		WM.startUp();       //world manager
 		DM.startUp();
 		IM.startUp();
+		RM.startUp();
 	}
 	Manager::startUp();
 
 
-	df::Sauser* newSauser = new df::Sauser();
 
-	newSauser->setPosition(df::Vector(50, 5));
-
-	df::Sauser* newSauser2 = new df::Sauser();
-
-	newSauser2->setVelocity(Vector(0, 0));
-
-
-	run();  //start main loop
 
 	return 0;
 }
@@ -72,6 +65,8 @@ void df::GameManager::shutDown()
 		WM.shutDown();
 		DM.shutDown();
 		IM.shutDown();
+		RM.shutDown();
+
 	}
 	Manager::shutDown();
 }

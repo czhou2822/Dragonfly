@@ -1,11 +1,13 @@
-#include "Object.h"
 #include "WorldManager.h"
+#include "ResourceManager.h"
+#include "Object.h"
 
 df::Object::Object()
 	:m_velocity(Vector(0,0))
 	,m_direction(Vector(0,0))
 	,m_speed(0.f)
 	,m_solidness(Solidness::HARD)
+	,m_animation()
 {
 	WM.insertObject(this);
 }
@@ -64,7 +66,22 @@ bool df::Object::isSolid() const
 	return false;
 }
 
+int df::Object::setSprite(std::string sprite_label)
+{
+	Sprite* p_sprite = RM.getSprite(sprite_label);
+	if (!p_sprite)
+	{
+		return -1;
+	}
+
+	m_animation.setName(getType());
+	m_animation.setIndex(0);
+	m_animation.setSprite(p_sprite);
+
+	return 0;
+}
+
 int df::Object::draw()
 {
-	return 0;
+	return m_animation.draw(getPosition());
 }

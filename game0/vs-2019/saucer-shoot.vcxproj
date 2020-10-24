@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Dragonfly\include\Animation.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Clock.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Color.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\DisplayManager.cpp" />
@@ -177,6 +178,7 @@
     <ClCompile Include="..\game.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Dragonfly\include\Animation.h" />
     <ClInclude Include="..\..\Dragonfly\include\Clock.h" />
     <ClInclude Include="..\..\Dragonfly\include\Color.h" />
     <ClInclude Include="..\..\Dragonfly\include\DisplayManager.h" />

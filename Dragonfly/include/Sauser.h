@@ -19,8 +19,6 @@ namespace df
 
 		void MoveForward();
 
-		virtual int draw() override;
-
 
 	};
 }

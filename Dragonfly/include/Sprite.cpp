@@ -2,20 +2,19 @@
 
 
 df::Sprite::Sprite()
-	:m_width(0)
-	,m_height(0)
-	,m_frame_count(0)
-	,m_frame(nullptr)
-	,m_color(df::COLOR_DEFAULT)
+	:m_frame_count(0)
 {
 
 }
 
 df::Sprite::Sprite(int max_frames)
-	:Sprite()
 {
-	m_max_frame_count = max_frames;
+	m_frame_count = 0;
+	m_width = 0;
+	m_height = 0;
 	m_frame = new Frame[max_frames];
+	m_max_frame_count = max_frames;
+	m_color = df::Color::YELLOW;
 }
 
 df::Sprite::~Sprite()

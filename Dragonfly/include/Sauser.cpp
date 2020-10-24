@@ -86,8 +86,3 @@ void df::Sauser::MoveForward()
 	setPosition(newPos);
 }
 
-int df::Sauser::draw()
-{
-	DM.drawCh(getPosition(), '&', df::WHITE);
-	return 0;
-}

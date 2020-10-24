@@ -6,7 +6,7 @@
 
 #include "Vector.h"
 #include "Event.h"
-
+#include "Animation.h"
 namespace df
 {
 
@@ -37,6 +37,8 @@ namespace df
 		int m_altitude;
 
 		Solidness m_solidness;
+
+		Animation m_animation;
 
 		
 
@@ -105,16 +107,16 @@ namespace df
 		//// Get bounding box of Object.
 		//Box getBox() const;
 
-		//// Set Sprite for this Object to animate.
-		//// Return 0 if ok, else -1.
-		//int setSprite(std::string sprite_label);
+		// Set Sprite for this Object to animate.
+		// Return 0 if ok, else -1.
+		int setSprite(std::string sprite_label);
 
-		//// Set Animation for this Object to new one.
-		//// Set bounding box to size of associated Sprite.
-		//void setAnimation(Animation new_animation);
+		// Set Animation for this Object to new one.
+		// Set bounding box to size of associated Sprite.
+		void setAnimation(Animation new_animation);
 
-		//// Get Animation for this Object.
-		//Animation getAnimation() const;
+		// Get Animation for this Object.
+		Animation getAnimation() const;
 
 		virtual int draw();
 

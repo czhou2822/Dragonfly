@@ -30,6 +30,7 @@
 #include "LogManager.h"
 #include "DisplayManager.h"
 #include "InputManager.h"
+#include "ResourceManager.h"
 #include "Clock.h"
 #include "Vector.h"
 
@@ -39,44 +40,22 @@
 int main(int argc, char *argv[]) 
 {
 
-	//{
-	//	Clock aclock;
-	//	timeBeginPeriod(1);
-	//	long int before = aclock.getNow();
-	//	Sleep(60);
-	//	printf("%i \n",aclock.split());
-	//	Sleep(600);
-	//	aclock.printNow(aclock.delta());
-	//	timeEndPeriod(1);
-	//}
-
 	GM.startUp();
 
-	
-	LM.writeLog("Hello Dragonfly %i\n", 10);
+	RM.loadSprite("sprites/saucer-spr.txt", "saucer");
+	df::Sauser* newSauser = new df::Sauser();
+
+	newSauser->setPosition(df::Vector(50, 5));
+	newSauser->setVelocity(df::Vector(0, 0));
+	newSauser->setSprite("saucer");
+	newSauser->setType("saucer");
 
 
-//	LM.setFlush(true);
+	GM.run();  //start main loop
+
 
 
 	GM.shutDown();
-
-	//DM.startUp();
-	//DM.drawCh(df::Vector(10, 5), '&', df::WHITE);
-	//DM.swapBuffers();
-
-
-	//while (1)
-	//{
-	//	IM.getInput();
-	//}
-
-
-
-
-	//Sleep(2000);
-	//DM.shutDown();
-
 	
 
 
