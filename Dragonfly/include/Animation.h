@@ -9,7 +9,7 @@
 #include <string>
 
 // Engine includes.
-//#include "Box.h"
+#include "Box.h"
 #include "Sprite.h"
 
 namespace df 
@@ -54,8 +54,8 @@ namespace df
 		/// Set animation slowdown count (-1 means stop animation).
 		int getSlowdownCount() const { return m_slowdown_count; }
 
-		///// Get bounding box of associated Sprite.
-		//Box getBox() const;
+		/// Get bounding box of associated Sprite.
+		Box getBox() const;
 
 		/// Draw single frame centered at position (x,y).
 		/// Drawing accounts for slowdown, and advances Sprite frame.

@@ -77,6 +77,7 @@ int df::Object::setSprite(std::string sprite_label)
 	m_animation.setName(getType());
 	m_animation.setIndex(0);
 	m_animation.setSprite(p_sprite);
+	setBox(m_animation.getBox());
 
 	return 0;
 }

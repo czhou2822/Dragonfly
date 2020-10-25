@@ -3,7 +3,7 @@
 #include <fstream>  
 
 
-
+#include "LogManager.h"
 #include "ResourceManager.h"
 
 
@@ -167,6 +167,101 @@ df::Sprite* df::ResourceManager::getSprite(std::string label) const
         if (label.compare(m_p_sprite[i]->getLabel())==0)
         {
             return m_p_sprite[i];
+        }
+    }
+    return nullptr;
+}
+
+int df::ResourceManager::loadSound(std::string filename, std::string label)
+{
+    if (m_sound_count == MAX_SOUNDS)
+    {
+        LM.writeLog("Sound array full.");
+        return -1;
+    }
+
+    if (m_sound[m_sound_count].loadSound(filename) == -1)
+    {
+        LM.writeLog("unable to load from file %s", filename.c_str());
+        return -1;
+    }
+
+    m_sound[m_sound_count].setLabel(label);
+    m_sound_count++;
+
+    return 0;
+}
+
+int df::ResourceManager::unloadSound(std::string label)
+{
+    for (int i = 0; i < m_sound_count-1; i++)
+    {
+        if (label.compare(m_sound[i].getLabel()) == 0)
+        {
+            for (int j = i; j < m_sound_count - 2; j++)
+            {
+                m_sound[j] = m_sound[j + 1];
+            }
+            m_sound_count--;
+            return 0;
+        }
+    }
+    return -1;
+}
+
+df::Sound* df::ResourceManager::getSound(std::string label)
+{
+    for (auto& tmp : m_sound)
+    {
+        if (tmp.getLabel().compare(label) == 0)
+        {
+            return &tmp;
+        }
+    }
+    return nullptr;
+}
+
+int df::ResourceManager::loadMusic(std::string filename, std::string label)
+{
+    if (m_music_count == MAX_MUSICS)
+    {
+        LM.writeLog("music array full.");
+        return -1;
+    }
+
+    if (m_music[m_music_count].loadMusic(filename) == -1)
+    {
+        LM.writeLog("unable to load from file %s", filename.c_str());
+        return -1;
+    }
+
+    m_music[m_music_count].setLabel(label);
+    m_music_count++;
+
+    return 0;
+}
+
+int df::ResourceManager::unloadMusic(std::string label)
+{
+    for (auto& tmp : m_music)
+    {
+        if (tmp.getLabel() == label)
+        {
+            tmp.setLabel("");
+            m_music_count--;
+            return 0;
+        }
+   }
+    return -1;
+}
+
+df::Music* df::ResourceManager::getMusic(std::string label)
+{
+    for (auto& tmp : m_music)
+    {
+        if (tmp.getLabel().compare(label) == 0)
+        {
+            return &tmp;
         }
     }
     return nullptr;

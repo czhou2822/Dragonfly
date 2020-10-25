@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "DisplayManager.h"
-
+#include "utility.h"
 
 
 df::DisplayManager::DisplayManager()
@@ -68,14 +68,16 @@ int df::DisplayManager::drawCh(Vector world_pos, char ch, Color color) const
 	}
 
 	//convert spaces(x,y) to pixels(x,y)
-	Vector pixel_pos = spacesToPixels(world_pos);
+	//Vector pixel_pos = spacesToPixels(world_pos);
+
+	Vector view_pos = worldToView(world_pos);
 
 	//draw background rectangle since text is "see through" in SFML
 	static sf::RectangleShape rectangle;
 	rectangle.setSize(sf::Vector2f(charWidth(), charHeight()));
 	rectangle.setFillColor(WINDOW_BACKGROUND_COLOR_DEFAULT);
-	rectangle.setPosition(pixel_pos.getX() - charWidth() / 10,
-						  pixel_pos.getY() + charHeight() / 5);
+	rectangle.setPosition(view_pos.getX() - charWidth() / 10,
+						  view_pos.getY() + charHeight() / 5);
 	m_p_window->draw(rectangle);
 
 	//create character text to draw
@@ -127,7 +129,7 @@ int df::DisplayManager::drawCh(Vector world_pos, char ch, Color color) const
 	text.setFillColor(newColor);
 
 
-	text.setPosition(pixel_pos.getX(), pixel_pos.getY());
+	text.setPosition(view_pos.getX(), view_pos.getY());
 
 	m_p_window->draw(text);
 

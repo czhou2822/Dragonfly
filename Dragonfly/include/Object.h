@@ -6,7 +6,10 @@
 
 #include "Vector.h"
 #include "Event.h"
+#include "Box.h"
 #include "Animation.h"
+
+
 namespace df
 {
 
@@ -40,7 +43,7 @@ namespace df
 
 		Animation m_animation;
 
-		
+		Box m_box;
 
 	public:
 		Object();
@@ -101,11 +104,11 @@ namespace df
 
 
 
-		//// Set bounding box of Object.
-		//void setBox(Box new_box);
+		// Set bounding box of Object.
+		void setBox(Box new_box) { m_box = new_box; }
 
-		//// Get bounding box of Object.
-		//Box getBox() const;
+		// Get bounding box of Object.
+		Box getBox() const { return m_box; }
 
 		// Set Sprite for this Object to animate.
 		// Return 0 if ok, else -1.

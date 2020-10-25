@@ -135,9 +135,14 @@ void df::WorldManager::draw()
 		while (!li.isDone())
 		{
 			Object* p_temp_o = li.currentObject();
+			Box temp_box = getWorldBox(p_temp_o);
 			if (p_temp_o->getAltitude() == alt)    //check if this object is drawn for current alt
 			{
-				p_temp_o->draw();					//if so, draw
+				//only draw if object would be visible on window
+				if (boxIntersectsBox(temp_box, m_view))
+				{
+					p_temp_o->draw();					//if so, draw
+				}
 			}
 			li.next();								//moving on
 		}
@@ -159,10 +164,15 @@ df::ObjectList df::WorldManager::getCollision(Object* p_o, Vector where) const
 		if (p_temp_o != p_o)
 		{
 			//if the distance of p_temp_o and where is less than 1, consider collide
-			if (df::positionsIntersect(p_temp_o->getPosition(), where) && p_temp_o->isSolid())
+
+			Box b = getWorldBox(p_o, where);
+			Box b_temp = getWorldBox(p_temp_o);
+
+			if (df::boxIntersectsBox(b, b_temp) && p_temp_o->isSolid())
 			{
 				collisionList.insert(p_temp_o);
 			}
+
 		}
 	}
 
@@ -207,14 +217,79 @@ int df::WorldManager::moveObject(Object* p_o, Vector where)
 		}
 	}
 
+	Box orig_box = getWorldBox(p_o);
 	p_o->setPosition(where);
-
-	if (p_o->getPosition().getX() > DM.getHorizontal() || p_o->getPosition().getY() > DM.getVertical())
+	Box new_box = getWorldBox(p_o);
+	if (boxIntersectsBox(orig_box, m_boundary) && !boxIntersectsBox(new_box, m_boundary))
 	{
 		EventOut ov;
 		p_o->eventHandler(&ov);
 	}
 
+	//if this is the following object, change viewport
+	if (m_p_view_following == p_o)
+	{
+		setViewPosition(p_o->getPosition());
+	}
+
 
 	return 0;
+}
+
+int df::WorldManager::setViewFollowing(Object* p_new_view_following)
+{
+	if (p_new_view_following == NULL)
+	{
+		m_p_view_following = NULL;
+		return 0;
+	}
+
+	ObjectListIterator li(&m_updates);
+
+
+	for (li.first(); !li.isDone(); li.next())
+	{
+		if (p_new_view_following = li.currentObject())
+		{
+			m_p_view_following = li.currentObject();
+			setViewPosition(m_p_view_following->getPosition());
+			return 0;
+		}
+
+	}
+
+	return -1;
+
+}
+
+void df::WorldManager::setViewPosition(Vector new_view_pos)
+{
+
+	//make sure horizontal not out of world boundary
+	int x = new_view_pos.getX() - m_view.getHorizontal() / 2;
+	if (x + m_view.getHorizontal() > m_boundary.getHorizontal())
+	{
+		x = m_boundary.getHorizontal() - m_view.getHorizontal();
+	}
+
+	if (x < 0)
+	{
+		x = 0;
+	}
+
+	//make sure vertical not out of world boundary
+	int y = new_view_pos.getY() - m_view.getVertical() / 2;
+	if (y + m_view.getVertical() > m_boundary.getVertical())
+	{
+		y = m_boundary.getVertical() - m_view.getVertical();
+	}
+
+	if (y < 0)
+	{
+		y = 0;
+	}
+
+	Vector new_corner(x, y);
+	m_view.setCorner(new_corner);
+
 }

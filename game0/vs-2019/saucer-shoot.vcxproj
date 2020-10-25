@@ -110,6 +110,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(TEMP)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,6 +153,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Dragonfly\include\Animation.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\Box.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Clock.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Color.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\DisplayManager.cpp" />
@@ -166,11 +168,13 @@
     <ClCompile Include="..\..\Dragonfly\include\InputManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\LogManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Manager.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\Music.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Object.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\ObjectList.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\ObjectListIterator.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\ResourceManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Sauser.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\Sound.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Sprite.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\utility.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Vector.cpp" />
@@ -179,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Dragonfly\include\Animation.h" />
+    <ClInclude Include="..\..\Dragonfly\include\Box.h" />
     <ClInclude Include="..\..\Dragonfly\include\Clock.h" />
     <ClInclude Include="..\..\Dragonfly\include\Color.h" />
     <ClInclude Include="..\..\Dragonfly\include\DisplayManager.h" />
@@ -193,11 +198,13 @@
     <ClInclude Include="..\..\Dragonfly\include\InputManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\LogManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\Manager.h" />
+    <ClInclude Include="..\..\Dragonfly\include\Music.h" />
     <ClInclude Include="..\..\Dragonfly\include\Object.h" />
     <ClInclude Include="..\..\Dragonfly\include\ObjectList.h" />
     <ClInclude Include="..\..\Dragonfly\include\ObjectListIterator.h" />
     <ClInclude Include="..\..\Dragonfly\include\ResourceManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\Sauser.h" />
+    <ClInclude Include="..\..\Dragonfly\include\Sound.h" />
     <ClInclude Include="..\..\Dragonfly\include\Sprite.h" />
     <ClInclude Include="..\..\Dragonfly\include\utility.h" />
     <ClInclude Include="..\..\Dragonfly\include\Vector.h" />

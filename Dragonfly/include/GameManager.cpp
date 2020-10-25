@@ -43,6 +43,12 @@ int df::GameManager::startUp()
 		IM.startUp();
 		RM.startUp();
 	}
+
+	//setup world and view boundary as the size of the initial window
+	{
+		WM.setBoundary(Box(Vector(0, 0), DM.getHorizontal(), DM.getVertical()));
+		WM.setView(Box(Vector(0, 0), DM.getHorizontal(), DM.getVertical()));
+	}
 	Manager::startUp();
 
 

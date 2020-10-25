@@ -14,8 +14,8 @@
 
 // Engine includes.
 #include "Manager.h"
-//#include "Music.h"
-//#include "Sound.h"
+#include "Music.h"
+#include "Sound.h"
 #include "Sprite.h"
 
 // Two-letter acronym for easier access to manager.
@@ -56,10 +56,10 @@ namespace df
 
 		int m_sprite_count;	         // Count of number of loaded sprites.
 
+		Sound m_sound[MAX_SOUNDS];	 // Array of sound buffers.
 		int m_sound_count;	         // Count of number of loaded sounds.
+		Music m_music[MAX_MUSICS];	 // Array of music buffers.
 		int m_music_count;	         // Count of number of loaded musics.
-		//Sound m_sound[MAX_SOUNDS];	 // Array of sound buffers.
-		//Music m_music[MAX_MUSICS];	 // Array of music buffers.
 
 	public:
 		// Get the one and only instance of the ResourceManager.
@@ -84,29 +84,29 @@ namespace df
 		// Return pointer to it if found, else NULL.
 		Sprite* getSprite(std::string label) const;
 
-		//// Load sound from file.
-		//// Return 0 if ok, else -1.
-		//int loadSound(std::string filename, std::string label);
+		// Load sound from file.
+		// Return 0 if ok, else -1.
+		int loadSound(std::string filename, std::string label);
 
-		//// Remove Sound with indicated label.
-		//// Return 0 if ok, else -1.
-		//int unloadSound(std::string label);
+		// Remove Sound with indicated label.
+		// Return 0 if ok, else -1.
+		int unloadSound(std::string label);
 
-		//// Find Sound with indicated label.
-		//// Return pointer to it if found, else NULL.
-		//Sound* getSound(std::string label);
+		// Find Sound with indicated label.
+		// Return pointer to it if found, else NULL.
+		Sound* getSound(std::string label);
 
-		//// Associate file with Music.
-		//// Return 0 if ok, else -1.
-		//int loadMusic(std::string filename, std::string label);
+		// Associate file with Music.
+		// Return 0 if ok, else -1.
+		int loadMusic(std::string filename, std::string label);
 
-		//// Remove label for Music with indicated label.
-		//// Return 0 if ok, else -1.
-		//int unloadMusic(std::string label);
+		// Remove label for Music with indicated label.
+		// Return 0 if ok, else -1.
+		int unloadMusic(std::string label);
 
-		//// Find Music with indicated label.
-		//// Return pointer to it if found, else NULL.
-		//Music* getMusic(std::string label);
+		// Find Music with indicated label.
+		// Return pointer to it if found, else NULL.
+		Music* getMusic(std::string label);
 	};
 
 } // end of namespace df

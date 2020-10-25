@@ -18,6 +18,17 @@ void df::Animation::setSprite(Sprite* p_new_sprite)
 	}
 }
 
+df::Box df::Animation::getBox() const
+{
+	m_p_sprite->getHeight();
+	m_p_sprite->getWidth();
+	if (m_p_sprite)
+	{
+		return Box(Vector(0, 0), m_p_sprite->getWidth(), m_p_sprite->getHeight());
+	}
+	return Box();
+}
+
 int df::Animation::draw(Vector position)
 {
 

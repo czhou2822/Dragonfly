@@ -33,6 +33,8 @@
 #include "ResourceManager.h"
 #include "Clock.h"
 #include "Vector.h"
+#include "Box.h"
+#include "WorldManager.h"
 
 #include "Sauser.h"
 
@@ -41,6 +43,13 @@ int main(int argc, char *argv[])
 {
 
 	GM.startUp();
+
+	df::Vector cornor(0, 0);
+	df::Box world_boundary(cornor, 80, 50);
+	WM.setBoundary(world_boundary);
+
+	df::Box view(cornor, 80, 24);
+	WM.setView(view);
 
 	RM.loadSprite("sprites/saucer-spr.txt", "saucer");
 	df::Sauser* newSauser = new df::Sauser();
