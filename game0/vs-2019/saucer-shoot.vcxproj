@@ -163,6 +163,7 @@
     <ClCompile Include="..\..\Dragonfly\include\EventMouse.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\EventOut.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\EventStep.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\EventView.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Frame.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\GameManager.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\InputManager.cpp" />
@@ -178,6 +179,7 @@
     <ClCompile Include="..\..\Dragonfly\include\Sprite.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\utility.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\Vector.cpp" />
+    <ClCompile Include="..\..\Dragonfly\include\ViewObject.cpp" />
     <ClCompile Include="..\..\Dragonfly\include\WorldManager.cpp" />
     <ClCompile Include="..\game.cpp" />
   </ItemGroup>
@@ -193,6 +195,7 @@
     <ClInclude Include="..\..\Dragonfly\include\EventMouse.h" />
     <ClInclude Include="..\..\Dragonfly\include\EventOut.h" />
     <ClInclude Include="..\..\Dragonfly\include\EventStep.h" />
+    <ClInclude Include="..\..\Dragonfly\include\EventView.h" />
     <ClInclude Include="..\..\Dragonfly\include\Frame.h" />
     <ClInclude Include="..\..\Dragonfly\include\GameManager.h" />
     <ClInclude Include="..\..\Dragonfly\include\InputManager.h" />
@@ -208,6 +211,7 @@
     <ClInclude Include="..\..\Dragonfly\include\Sprite.h" />
     <ClInclude Include="..\..\Dragonfly\include\utility.h" />
     <ClInclude Include="..\..\Dragonfly\include\Vector.h" />
+    <ClInclude Include="..\..\Dragonfly\include\ViewObject.h" />
     <ClInclude Include="..\..\Dragonfly\include\WorldManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -102,6 +102,12 @@
     <ClCompile Include="..\..\Dragonfly\include\Sound.cpp">
       <Filter>Source Files\EngineRelated</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\ViewObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Dragonfly\include\EventView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Dragonfly\include\Manager.h">
@@ -183,6 +189,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Dragonfly\include\Music.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\ViewObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dragonfly\include\EventView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

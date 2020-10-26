@@ -2,6 +2,7 @@
 #include "DisplayManager.h"
 #include "EventCollision.h"
 #include "EventOut.h"
+#include "ViewObject.h"
 #include "utility.h"
 
 
@@ -141,6 +142,7 @@ void df::WorldManager::draw()
 				//only draw if object would be visible on window
 				if (boxIntersectsBox(temp_box, m_view))
 				{
+					dynamic_cast<ViewObject*> (p_temp_o);
 					p_temp_o->draw();					//if so, draw
 				}
 			}

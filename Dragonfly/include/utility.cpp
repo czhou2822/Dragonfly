@@ -1,3 +1,5 @@
+#include <sstream>
+
 #include "utility.h"
 #include "Object.h"
 #include "WorldManager.h"
@@ -92,7 +94,25 @@ df::Vector df::worldToView(Vector world_pos)
     return view_pos;
 }
 
-//Vector df::viewToWorld(Vector view_pos)
-//{
-//    return Vector();
-//}
+df::Vector df::viewToWorld(Vector view_pos)
+{
+    Vector view_origin = WM.getView().getCorner();
+
+    int view_x = view_origin.getX();
+    int view_y = view_origin.getY();
+
+    Vector world_pos(view_pos.getX() + view_x, view_pos.getY() + view_y);
+
+    return world_pos;
+}
+
+std::string df::toString(int i)
+{
+    using std::stringstream;
+
+    std::stringstream ss;
+
+    ss << i;
+
+    return ss.str();
+}

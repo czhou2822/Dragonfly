@@ -1,1 +1,19 @@
-﻿  saucer-shoot.vcxproj -> C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\game0\vs-2019\x64\Debug\saucer-shoot.exe
+﻿  DisplayManager.cpp
+C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\DisplayManager.cpp(91,37): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\DisplayManager.cpp(95,38): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+  EventView.cpp
+  utility.cpp
+C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\utility.cpp(89,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\utility.cpp(90,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\utility.cpp(101,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\utility.cpp(102,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  ViewObject.cpp
+  WorldManager.cpp
+C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\WorldManager.cpp(271,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\WorldManager.cpp(274,34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\WorldManager.cpp(283,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\WorldManager.cpp(286,32): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\WorldManager.cpp(294,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\Dragonfly\include\WorldManager.cpp(294,20): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  saucer-shoot.vcxproj -> C:\Users\zhouc\OneDrive\Documents\Visual Studio 2019\Projects\DragonFlyEngine\game0\vs-2019\x64\Debug\saucer-shoot.exe

@@ -29,11 +29,11 @@ namespace df
 	// Convert world position to view position.
 	Vector worldToView(Vector world_pos);
 
-	//// Convert view position to world position.
-	//Vector viewToWorld(Vector view_pos);
+	// Convert view position to world position.
+	Vector viewToWorld(Vector view_pos);
 
-	//// Convert integer to string, returning string.
-	//std::string toString(int i);
+	// Convert integer to string, returning string.
+	std::string toString(int i);
 
 } // end of namespace df
 #endif // __UTILITY_H__
